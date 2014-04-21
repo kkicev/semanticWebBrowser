@@ -1,0 +1,490 @@
+/* 
+    Document   : base
+    Created on : Dec 19, 2013, 12:39:39 AM
+    Author     : Kristijan
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+html,
+body {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 30px;
+}
+
+button {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background: none;
+        font-size: 100%;
+        vertical-align: baseline;
+        font-family: inherit;
+        color: inherit;
+        -webkit-appearance: none;
+        /*-moz-appearance: none;*/
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+}
+
+body {
+        font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 1.4em;
+        background: #eaeaea url('bg.png');
+        color: #4d4d4d;
+        width: 90%;
+        margin: 0 auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: antialiased;
+        -ms-font-smoothing: antialiased;
+        -o-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+}
+
+.mainSection {
+        background: #fff;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid #ccc;
+        position: absolute;
+        width: 200px;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2),
+                                0 25px 50px 0 rgba(0, 0, 0, 0.15);
+}
+
+.wraper{
+    margin:150px 0 0 0;
+    display: inline;
+}
+
+#wraperMain{
+    margin: 200px 0 0 0;
+    clear: left;
+}
+
+#wraperDatasets{
+    margin: 50px 0 0 0;
+}
+
+#wraperClasses{
+    margin-left: 300px;
+    margin-top: 0px;
+}
+
+.wrapDim{
+        height: 100px;
+        width: 200px;
+        float:left;
+        margin-right:50px;
+        margin-bottom:250px;
+}
+
+.mainSection:before {
+        content: '';
+        border-left: 1px solid #f5d6d6;
+        border-right: 1px solid #f5d6d6;
+        width: 2px;
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        height: 100%;
+}
+
+.mainSection input::-webkit-input-placeholder {
+        font-style: italic;
+}
+
+.mainSection input:-moz-placeholder {
+        font-style: italic;
+        color: #a9a9a9;
+}
+
+.mainSection h2 {
+    position: relative;
+}
+
+.header {
+        margin-top: -53px;
+        border-radius: inherit;
+}
+
+.headerh3 {
+        margin-top: -43px;
+        border-radius: inherit;
+}
+
+.headerh3:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 15px;
+        z-index: 2;
+
+        border-top-left-radius: 1px;
+        border-top-right-radius: 1px;
+}
+
+.header:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 15px;
+        z-index: 2;
+
+        border-top-left-radius: 1px;
+        border-top-right-radius: 1px;
+}
+
+.main {
+        position: relative;
+        z-index: 2;
+        border-top: 1px dotted #adadad;
+}
+
+
+.listItems {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+}
+
+.listItems li {
+        position: relative;
+        font-size: 12px;
+        border-bottom: 1px dotted #ccc;
+}
+
+.listItems li:last-child {
+        border-bottom: none;
+}
+
+.listItems li .toggle {
+        text-align: center;
+        width: 40px;
+        /* auto, since non-WebKit browsers doesn't support input styling */
+        height: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        border: none; /* Mobile Safari */
+        -webkit-appearance: none;
+        /*-moz-appearance: none;*/
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+}
+
+.listItems li .toggle:after {
+        content: '✔';
+        line-height: 43px; /* 40 + a couple of pixels visual adjustment */
+        font-size: 20px;
+        color: #d9d9d9;
+        text-shadow: 0 -1px 0 #bfbfbf;
+}
+
+.listItems li .toggle:checked:after {
+        color: #85ada7;
+        text-shadow: 0 1px 0 #669991;
+        bottom: 1px;
+        position: relative;
+}
+
+.listItems li label {
+        word-break: break-word;
+        padding: 15px;
+        margin-left: 45px;
+        display: block;
+        line-height: 1.2;
+        font-style: oblique;
+        -webkit-transition: color 0.4s;
+        -moz-transition: color 0.4s;
+        -ms-transition: color 0.4s;
+        -o-transition: color 0.4s;
+        transition: color 0.4s;
+}
+
+.listItems li.completed label {
+        color: #a9a9a9;
+        font-weight: bold;
+}
+
+
+.footer {
+        color: #777;
+        padding: 0 15px;
+        position: absolute;
+        right: 0;
+        bottom: -31px;
+        left: 0;
+        height: 28px;
+        z-index: 1;
+        text-align: center;
+}
+
+.footer:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 31px;
+        left: 0;
+        height: 70px;
+        z-index: -1;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3),
+                                0 6px 0 -3px rgba(255, 255, 255, 0.8),
+                                0 7px 1px -3px rgba(0, 0, 0, 0.3),
+                                0 55px 0 -6px rgba(255, 255, 255, 0.8),
+                                0 56px 2px -6px rgba(0, 0, 0, 0.2);
+}
+
+#footerClasses{
+    height: 15px;
+}
+
+.selected-count {
+        float: left;
+        clear: left;
+        text-align: left;
+}
+
+
+.nav {
+        float: right;
+        position: relative;
+        line-height: 20px;
+        text-decoration: none;
+        background: rgba(0, 0, 0, 0.1);
+        font-size: 11px;
+        padding: 0 10px;
+        border-radius: 3px;
+        box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.next {
+        float: right;
+}
+
+.prev {
+        float: left;
+        margin-left: 5px;
+}
+
+.nav:hover {
+        background: rgba(0, 0, 0, 0.15);
+        box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.3);
+}
+
+#info {
+        margin: 65px auto 0;
+        color: #a6a6a6;
+        font-size: 12px;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+        text-align: center;
+}
+
+#info a {
+        color: inherit;
+}
+
+/*
+        Hack to remove background from Mobile Safari.
+        Can't use it globally since it destroys checkboxes in Firefox and Opera
+*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+        #toggle-all,
+        .listItems li .toggle {
+                background: none;
+        }
+
+        .listItems li .toggle {
+                height: 40px;
+        }
+
+        #toggle-all {
+                top: -56px;
+                left: -15px;
+                width: 65px;
+                height: 41px;
+                -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+                -webkit-appearance: none;
+                appearance: none;
+        }
+}
+
+.block{
+        display:block;
+}
+
+h1 {
+        width: 100%;
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        color: #b3b3b3;
+        color: rgba(255, 255, 255, 0.3);
+        text-shadow: -1px -1px rgba(0, 0, 0, 0.2);
+        -webkit-text-rendering: optimizeLegibility;
+        -moz-text-rendering: optimizeLegibility;
+        -ms-text-rendering: optimizeLegibility;
+        -o-text-rendering: optimizeLegibility;
+        text-rendering: optimizeLegibility;
+}
+
+h2 {
+        width: 100%;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        color: #b3b3b3;
+        color: rgba(255, 255, 255, 0.3);
+        text-shadow: -1px -1px rgba(0, 0, 0, 0.2);
+        -webkit-text-rendering: optimizeLegibility;
+        -moz-text-rendering: optimizeLegibility;
+        -ms-text-rendering: optimizeLegibility;
+        -o-text-rendering: optimizeLegibility;
+        text-rendering: optimizeLegibility;
+}
+
+h3 {
+        width: 100%;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        color: #b3b3b3;
+        color: rgba(255, 255, 255, 0.3);
+        text-shadow: -1px -1px rgba(0, 0, 0, 0.2);
+        -webkit-text-rendering: optimizeLegibility;
+        -moz-text-rendering: optimizeLegibility;
+        -ms-text-rendering: optimizeLegibility;
+        -o-text-rendering: optimizeLegibility;
+        text-rendering: optimizeLegibility;
+}
+
+#mainHeader{
+   float: top;
+   margin-top: 30px;
+}
+
+.greyHeader:before{
+            border-bottom: 1px solid #6c615c;
+        background: #8d7d77;
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(132, 110, 100, 0.8)),to(rgba(101, 84, 76, 0.8)));
+        background: -webkit-linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));
+        background: -moz-linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));
+        background: -o-linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));
+        background: -ms-linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));
+        background: linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#9d8b83', EndColorStr='#847670');
+}
+
+.blueHeader:before{
+            border-bottom: 1px solid cornflowerblue;
+        background: cornflowerblue;
+        background: -webkit-gradient(linear, left top, left bottom, from(cornflowerblue),to(cornflowerblue));
+        background: -webkit-linear-gradient(top,cornflowerblue, cornflowerblue);
+        background: -moz-linear-gradient(top, cornflowerblue, cornflowerblue);
+        background: -o-linear-gradient(top, cornflowerblue, cornflowerblue);
+        background: -ms-linear-gradient(top, cornflowerblue, cornflowerblue);
+        background: linear-gradient(top, cornflowerblue, cornflowerblue);
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#9d8b83', EndColorStr='#847670');
+}
+
+.woodHeader:before{
+            border-bottom: 1px solid burlywood;
+        background: burlywood;
+        background: -webkit-gradient(linear, left top, left bottom, from(burlywood),to(burlywood));
+        background: -webkit-linear-gradient(top,burlywood, burlywood);
+        background: -moz-linear-gradient(top, burlywood, burlywood);
+        background: -o-linear-gradient(top, burlywood, burlywood);
+        background: -ms-linear-gradient(top,burlywood, burlywood);
+        background: linear-gradient(top, burlywood, burlywood);
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#9d8b83', EndColorStr='#847670');
+}
+
+.tomatoHeader:before{
+            border-bottom: 1px solid tomato;
+        background: tomato;
+        background: -webkit-gradient(linear, left top, left bottom, from(tomato),to(tomato));
+        background: -webkit-linear-gradient(top,tomato, tomato);
+        background: -moz-linear-gradient(top, tomato, tomato);
+        background: -o-linear-gradient(top, tomato,tomato);
+        background: -ms-linear-gradient(top, tomato, tomato);
+        background: linear-gradient(top, tomato, tomato);
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#9d8b83', EndColorStr='#847670');
+}
+
+.forestHeader:before{
+            border-bottom: 1px solid forestgreen;
+        background: forestgreen;
+        background: -webkit-gradient(linear, left top, left bottom, from(forestgreen),to(forestgreen));
+        background: -webkit-linear-gradient(top,forestgreen, forestgreen);
+        background: -moz-linear-gradient(top, forestgreen, forestgreen);
+        background: -o-linear-gradient(top, forestgreen, forestgreen);
+        background: -ms-linear-gradient(top, forestgreen, forestgreen);
+        background: linear-gradient(top, forestgreen, forestgreen);
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#9d8b83', EndColorStr='#847670');
+}
+
+.yellowHeader:before{
+            border-bottom: 1px solid yellow;
+        background: yellow;
+        background: -webkit-gradient(linear, left top, left bottom, from(yellow),to(yellow));
+        background: -webkit-linear-gradient(top,yellow, yellow);
+        background: -moz-linear-gradient(top, yellow, yellow);
+        background: -o-linear-gradient(top, yellow, yellow);
+        background: -ms-linear-gradient(top, yellow, yellow);
+        background: linear-gradient(top, yellow, yellow);
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#9d8b83', EndColorStr='#847670');
+}
+
+.scrollable{
+    overflow: auto;
+    height: 200px;
+}
+
+.searchBox{
+    width: 100%;
+}
+
+.inProperties{
+    float:left;
+    position: relative;
+    border-bottom-left-radius: 4px;
+    border-width: 2px;
+    border-top-left-radius: 4px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.15);
+    background-color: white;
+}
+
+.outProperties{
+    float:right;
+    position: relative;
+    border-bottom-right-radius: 4px;
+    border-width: 2px;
+    border-top-right-radius: 4px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.15);
+    background-color: white;
+}
+
+.inPropDiv{
+    position: relative;
+    float:left;
+    top:0px;
+    max-height: 200px;
+}
+.outPropDiv{
+    position: relative;
+    float:right;
+    top:0px;
+    max-height: 200px;
+}
